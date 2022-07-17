@@ -177,10 +177,23 @@ a:visited {
   font-size: 2rem;
   /* min-height: 50% */
 }
+
 .position2{
     position: relative;
     top: -40%;
     left: 15%;
+    
+}
+.pagina-4{
+    max-width: 100vh;
+    height: 100vh;
+    
+    
+}
+.xxx{
+    margin-left: 60%;
+    width: 20%;
+    /* display: none; */
     
 }
 
@@ -230,7 +243,7 @@ a:visited {
 .position2{
     position: relative;
     display: flex;
-    top: -72%;
+    top: -51%;
     left: 15%;
     flex-direction: column;
 }
@@ -264,7 +277,7 @@ a:visited {
     position: relative;
     display: flex;
     left: -9%;
-    top: -1.8%;
+    top: 2.8%;
 }
 .position2{
     position: relative;
@@ -309,7 +322,7 @@ a:visited {
         position: relative;
         display: flex;
         left: -9%;
-        top: -1.8%;
+        top: 3%;
     }
     .position2{
         position: relative;

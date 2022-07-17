@@ -1,12 +1,60 @@
 import { useState } from "react";
-
-
 import "./App.css";
-
 import Navbar from "./components/Navbar";
+import { Carousel } from 'react-carousel-minimal';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const data = [
+    {
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
+      caption: '<div><a href="https://firefox.com/">Descargar Firefox</a></div>'
+      
+    },
+    {
+      image: "https://cdn.britannica.com/s:800x450,c:crop/35/204435-138-2F2B745A/Time-lapse-hyper-lapse-Isle-Skye-Scotland.jpg",
+      caption: "Scotland"
+    },
+    {
+      image: "https://static2.tripoto.com/media/filter/tst/img/735873/TripDocument/1537686560_1537686557954.jpg",
+      caption: "Darjeeling"
+    },
+    {
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Palace_of_Fine_Arts_%2816794p%29.jpg/1200px-Palace_of_Fine_Arts_%2816794p%29.jpg",
+      caption: "San Francisco"
+    },
+    {
+      image: "https://i.natgeofe.com/n/f7732389-a045-402c-bf39-cb4eda39e786/scotland_travel_4x3.jpg",
+      caption: "Scotland"
+    },
+    {
+      image: "https://www.tusktravel.com/blog/wp-content/uploads/2020/07/Best-Time-to-Visit-Darjeeling-for-Honeymoon.jpg",
+      caption: "Darjeeling"
+    },
+    {
+      image: "https://www.omm.com/~/media/images/site/locations/san_francisco_780x520px.ashx",
+      caption: "San Francisco"
+    },
+    {
+      image: "https://images.ctfassets.net/bth3mlrehms2/6Ypj2Qd3m3jQk6ygmpsNAM/61d2f8cb9f939beed918971b9bc59bcd/Scotland.jpg?w=750&h=422&fl=progressive&q=50&fm=jpg",
+      caption: "Scotland"
+    }
+    
+  ];
+
+  const captionStyle = {
+    fontSize: '2em',
+    fontWeight: 'bold',
+     
+  }
+  const slideNumberStyle = {
+    fontSize: '20px',
+    fontWeight: 'bold',
+  }
+
+
+
+
+
 
   return (
     <div className="App">
@@ -63,14 +111,14 @@ function App() {
 
 
       </div>
-      <div className="pagina-3 margin-top">
+      <div className="pagina-3 ">
 
-        <span className="margin-left" >
+        <span className="margin-left margin-top2" >
           
        <img className="estudios-width" src="https://cdn.discordapp.com/attachments/968368069514772502/998075183254474822/boniMesa_de_trabajo_6.webp" alt="" />
        <div className="position2">
        <div className="estudios-title ">Estudios</div>
-       <ul className="secondary-color margin-top2">
+       <ul className="secondary-color margin-top">
           <li>cualquier estupides ahi</li>
           <li>cualquier estupides ahi</li>
           <li>cualquier estupides ahi</li>
@@ -80,13 +128,41 @@ function App() {
        </div>
         
         </span>
-        <span className="min-100 margin-top margin-left position">
+        <span className="min-100 margin-top2 margin-left position">
           <p className="abilities ">Lorem </p>
         </span>
 
       </div>
-      <div>
-        
+      <div className="pagina-4">
+      <div className=" xxx margin-top" style={{
+          padding: "0 20px"
+        }}>
+          <Carousel 
+            data={data}
+            time={2000}
+            width="600px"
+            height="400px"
+            captionStyle={captionStyle}
+            radius="10px"
+            
+            captionPosition="bottom"
+            automatic={true}
+            dots={true}
+            pauseIconColor="white"
+            pauseIconSize="40px"
+            slideBackgroundColor="darkgrey"
+            slideImageFit="cover"
+            thumbnails={true}
+            thumbnailWidth="100px"
+            style={{
+              textAlign: "center",
+              minWidth: "1000px",
+              maxHeight: "500px",
+              margin: "40px auto",
+            }}
+          />
+        </div>
+
       </div>
     </div>
   );
