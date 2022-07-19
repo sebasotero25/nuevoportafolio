@@ -147,17 +147,18 @@ a:visited {
     height: 100vh;
 }
 .abilities{
-  max-width: 100vh;
-  height: 51vh;
-  background-image: url(./components/img/Fondo2.webp);
-  background-repeat: no-repeat; 
-  background-size: 100vw;
-  width: 90%;
   
+  max-width: 90vw;
+  max-height: 60vh;
+  position: relative;
   
 }
 .estudios-width{
     max-width: 90vw;
+    max-height: 60vh;
+    
+    
+
 }
 .min-100{
     min-width: 100%;
@@ -179,9 +180,9 @@ a:visited {
 }
 
 .position2{
-    position: relative;
-    top: -40%;
-    left: 15%;
+    position: absolute;
+    top: -2.5%;
+   left: 15%; 
     
 }
 .pagina-4{
@@ -190,11 +191,9 @@ a:visited {
     
     
 }
-.xxx{
-    margin-left: 60%;
-    width: 20%;
-    /* display: none; */
-    
+.img2{
+  max-width: 90vw;
+  max-height: 60vh;
 }
 
 @keyframes slidein {
@@ -240,13 +239,7 @@ a:visited {
     left: -9%;
     top: -1.8%;
 }
-.position2{
-    position: relative;
-    display: flex;
-    top: -51%;
-    left: 15%;
-    flex-direction: column;
-}
+
 .margin-top2{
     margin-top: 10%;
 }
@@ -279,13 +272,7 @@ a:visited {
     left: -9%;
     top: 2.8%;
 }
-.position2{
-    position: relative;
-    display: flex;
-    top: -85%;
-    left: 15%;
-    flex-direction: column;
-}
+
 .margin-top2{
     margin-top: 10%;
 }
@@ -324,13 +311,7 @@ a:visited {
         left: -9%;
         top: 3%;
     }
-    .position2{
-        position: relative;
-        display: flex;
-        top: -85%;
-        left: 15%;
-        flex-direction: column;
-    }
+    
     .margin-top2{
         margin-top: 10%;
     }
@@ -339,11 +320,53 @@ a:visited {
     }
   }
   @media (min-width: 1400px) {
-    .position2{
-        position: relative;
-        display: flex;
-        top: -60%;
-        left: 15%;
-        flex-direction: column;
+    
+  }
+  @keyframes rotation {
+    from {
+      transform: rotatey(0deg);
+    }
+    to {
+      transform: rotateY(359deg);
     }
   }
+.fa-html5{
+  color: rgb(199, 65, 13);
+  animation: rotation 4s infinite linear;
+  position: absolute;
+  top: 5%;
+  left: 45%;
+}
+.fa-js{
+  color: yellow;
+  animation: rotation 4s infinite linear;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+.fa-css3-alt{
+  color: blue;
+  animation: rotation 4s infinite linear;
+  position: absolute;
+  top: 20%;
+  left: 60%;
+}
+.fa-react{
+  color: cyan;
+  animation: rotation 4s infinite linear;
+  position: absolute;
+  top: 55%;
+  left: 35%;
+}
+.fa-node-js{
+  color: green;
+  animation: rotation 4s infinite linear;
+  position: absolute;
+  top: 55%;
+  left: 55%;
+}
+.position-rel{
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
